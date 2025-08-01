@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./dashboard.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo_no-bg.png" alt="Logo" class="logo">
+    </header>
+    <main>
+        <div class="table-section">
+            <div class="actions">
+                <button class="block-button"><i class="fa-solid fa-lock"></i> Block</button>
+                <button class="unblock-button"><i class="fa-solid fa-lock-open"></i></button>
+                <button class="delete-button"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+            <table id="users-table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" name="" id=""></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Last Seen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
