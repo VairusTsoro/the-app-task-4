@@ -22,14 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Failed to parse JSON response:", err);
             }
 
-            if (res.ok) {
-                window.location.href = "./frontend/login.html";
-            } else {
-                document.getElementById("register-error").innerText = data?.message || "Registration failed.";
-            }
+            if (res.ok) window.location.href = "./login.html";
+            else document.getElementById("register-error").innerText = data?.message || "Registration failed.";
         } catch (err) {
             console.error("Registration error:", err);
             document.getElementById("register-error").innerText = "Something went wrong.";
         }
     });
-}); 
+});

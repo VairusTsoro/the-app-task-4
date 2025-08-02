@@ -19,19 +19,19 @@
 
 <body>
     <header>
-        <img src="../../frontend/images/logo_no-bg.png" alt="Logo" class="logo">
+        <a href="login.html"><img src="../../frontend/images/logo_no-bg.png" alt="Logo" class="logo"></a>
     </header>
     <main>
         <div class="table-section">
             <div class="actions">
-                <button class="block-button"><i class="fa-solid fa-lock"></i> Block</button>
-                <button class="unblock-button"><i class="fa-solid fa-lock-open"></i></button>
-                <button class="delete-button"><i class="fa-solid fa-trash-can"></i></button>
+                <button id="block-button"><i class="fa-solid fa-lock"></i> Block</button>
+                <button id="unblock-button"><i class="fa-solid fa-lock-open"></i></button>
+                <button id="delete-button"><i class="fa-solid fa-trash-can"></i></button>
             </div>
             <table id="users-table">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" name="" id=""></th>
+                        <th><input type="checkbox" id="select_all"></th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Last Seen</th>
@@ -40,7 +40,7 @@
                 <tbody>
                 </tbody>
             </table>
-        </div>
+        <button id="logout-button">Sign Out</button>
     </main>
 </body>
 

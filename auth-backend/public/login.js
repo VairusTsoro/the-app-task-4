@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();
-    console.log("Login form submitted");
-    const name = document.getElementById("name").value;
+
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -12,15 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ email, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        alert("Login successful!");
         localStorage.setItem("token", data.token);
-        window.location.href = "./frontend/dashboard.html";
+        window.location.href = "./dashboard.html";
       } else {
         alert("Login failed: " + data.message);
       }
@@ -30,3 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+if (localStorage.getItem("token")) {
+  window.location.href = "./dashboard.html";
+}
