@@ -2,7 +2,7 @@ let selected_user_ids = new Set();
 
 async function render_table() {
     try {
-        const res = await fetch('http://localhost:4000/api/auth/dashboard', {
+        const res = await fetch('/dashboard', {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem('token')
             }
@@ -57,7 +57,7 @@ document.getElementById('delete-button').addEventListener('click', async () => {
     if (selected_user_ids.size === 0) return alert('No users selected');
     const confirmDelete = confirm('Are you sure you want to delete selected users?');
     if (!confirmDelete) return;
-    const res = await fetch('http://localhost:4000/api/auth/delete-users', {
+    const res = await fetch('/delete-users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ids: Array.from(selected_user_ids) })
@@ -70,7 +70,7 @@ document.getElementById('block-button').addEventListener('click', async () => {
     if (selected_user_ids.size === 0) return alert('No users selected');
     const confirmBlock = confirm('Are you sure you want to block selected users?');
     if (!confirmBlock) return;
-    const res = await fetch('http://localhost:4000/api/auth/block-users', {
+    const res = await fetch('/block-users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ids: Array.from(selected_user_ids) })
@@ -87,7 +87,7 @@ document.getElementById('unblock-button').addEventListener('click', async () => 
     if (selected_user_ids.size === 0) return alert('No users selected');
     const confirmUnblock = confirm('Are you sure you want to unblock selected users?');
     if (!confirmUnblock) return;
-    const res = await fetch('http://localhost:4000/api/auth/unblock-users', {
+    const res = await fetch('/unblock-users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ids: Array.from(selected_user_ids) })
