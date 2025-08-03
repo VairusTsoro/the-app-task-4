@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
+const API_URL = "https://the-app-task-4.onrender.com/";
+
 const app = express();
 
 app.use(cors());

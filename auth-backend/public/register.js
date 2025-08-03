@@ -1,3 +1,4 @@
+import { API_URL } from "./index.js";
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("register-form").addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -7,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("password").value;
 
         try {
-            const res = await fetch("/register", {
+            const res = await fetch(`${API_URL}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
