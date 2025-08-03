@@ -1,4 +1,4 @@
-import { API_URL } from "./index.js";
+const API_URL = "https://the-app-task-4.onrender.com/api/auth";
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("login-form").addEventListener("submit", async (e) => {
     e.preventDefault();

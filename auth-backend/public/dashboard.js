@@ -1,4 +1,4 @@
-import { API_URL } from "./index.js";
+const API_URL = "https://the-app-task-4.onrender.com/api/auth";
 let selected_user_ids = new Set();
 async function render_table() {
     try {
