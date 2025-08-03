@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const API_URL = "https://the-app-task-4.onrender.com/";
+export const API_URL = "https://the-app-task-4.onrender.com/api/auth";
 
 const app = express();
 
